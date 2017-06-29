@@ -1,0 +1,7 @@
+include ':app'
+include ':belog'
+include ':cyborg-core'
+include ':reflection'
+include ':module-manager'
+include ':nu-art-core'
+
