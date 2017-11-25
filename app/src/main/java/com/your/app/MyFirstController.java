@@ -1,4 +1,4 @@
-package com.nu.art.cyborg.tutorial.helloWorld;
+package com.your.app;
 
 import android.view.View;
 import android.widget.TextView;
@@ -6,12 +6,13 @@ import android.widget.TextView;
 import com.nu.art.cyborg.annotations.ViewIdentifier;
 import com.nu.art.cyborg.common.consts.ViewListener;
 import com.nu.art.cyborg.core.CyborgController;
+import com.nu.art.cyborg.tutorial.helloWorld.R;
 
 /**
  * Created by TacB0sS on 12-May 2017.
  */
 
-public class Controller_HelloWorld
+public class MyFirstController
 		extends CyborgController {
 
 	// Inject view and set an OnLongClickListener and an OnClickListener.
@@ -22,7 +23,7 @@ public class Controller_HelloWorld
 									})
 	TextView helloWorldTextView;
 
-	public Controller_HelloWorld() {
+	public MyFirstController() {
 		super(R.layout.controller__hello_world);
 	}
 
