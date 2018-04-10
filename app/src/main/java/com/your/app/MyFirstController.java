@@ -6,7 +6,6 @@ import android.widget.TextView;
 import com.nu.art.cyborg.annotations.ViewIdentifier;
 import com.nu.art.cyborg.common.consts.ViewListener;
 import com.nu.art.cyborg.core.CyborgController;
-import com.nu.art.cyborg.tutorial.helloWorld.R;
 
 /**
  * Created by TacB0sS on 12-May 2017.

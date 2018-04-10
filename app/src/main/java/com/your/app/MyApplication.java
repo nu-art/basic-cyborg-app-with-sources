@@ -4,7 +4,6 @@ import android.app.Application;
 
 import com.nu.art.cyborg.core.CyborgBuilder;
 import com.nu.art.cyborg.core.CyborgBuilder.CyborgConfiguration;
-import com.nu.art.cyborg.tutorial.helloWorld.R;
 
 public class MyApplication
 		extends Application {
