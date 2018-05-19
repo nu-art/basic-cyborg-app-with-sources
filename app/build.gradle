@@ -1,5 +1,5 @@
 applyAndroidApplication("com.your.app", "basic-cyborg-app")
 
 dependencies {
-    compile "com.nu-art-software.cyborg:cyborg-core:${NU_ART_VERSION}"
+    implementation "com.nu-art-software.cyborg:cyborg-core:${NU_ART_VERSION}"
 }
