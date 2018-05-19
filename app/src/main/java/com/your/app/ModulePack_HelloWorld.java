@@ -13,14 +13,14 @@ package com.your.app;
 import com.nu.art.modular.core.ModulesPack;
 
 @SuppressWarnings("unchecked")
-public class MyModulePack
+public class ModulePack_HelloWorld
 		extends ModulesPack {
 
 	private static final Class[] Modules = {
-			MyModule.class,
+			Module_HelloWorld.class,
 	};
 
-	private MyModulePack() {
+	private ModulePack_HelloWorld() {
 		super(Modules);
 	}
 

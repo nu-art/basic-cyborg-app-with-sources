@@ -6,11 +6,11 @@ import com.nu.art.cyborg.core.CyborgBuilder;
 import com.nu.art.cyborg.core.CyborgBuilder.CyborgConfiguration;
 
 public class MyApplication
-		extends Application {
+	extends Application {
 
 	@SuppressWarnings("unchecked")
-	private final Class<MyModulePack>[] Modules = new Class[]{
-			MyModulePack.class
+	private final Class<ModulePack_HelloWorld>[] Modules = new Class[]{
+		ModulePack_HelloWorld.class
 	};
 
 	@Override
@@ -18,6 +18,6 @@ public class MyApplication
 	public void onCreate() {
 		super.onCreate();
 		// Providing the first layout to preset once the application launches.
-		CyborgBuilder.startCyborg(new CyborgConfiguration(this, R.layout.activity__hello_world, Modules));
+		CyborgBuilder.startCyborg(new CyborgConfiguration(this, R.layout.cyborgview__hello_world_stack, Modules));
 	}
 }

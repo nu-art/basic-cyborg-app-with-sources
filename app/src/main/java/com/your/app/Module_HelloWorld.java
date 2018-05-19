@@ -12,7 +12,7 @@ package com.your.app;
 
 import com.nu.art.cyborg.core.CyborgModule;
 
-public class MyModule
+public class Module_HelloWorld
 		extends CyborgModule {
 
 	@Override

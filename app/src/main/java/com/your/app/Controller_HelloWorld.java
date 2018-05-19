@@ -11,19 +11,28 @@ import com.nu.art.cyborg.core.CyborgController;
  * Created by TacB0sS on 12-May 2017.
  */
 
-public class MyFirstController
-		extends CyborgController {
+public class Controller_HelloWorld
+	extends CyborgController {
+
+	private static int index;
 
 	// Inject view and set an OnLongClickListener and an OnClickListener.
 	@ViewIdentifier(viewId = R.id.HelloWorld,
-									listeners = {
-											ViewListener.OnLongClick,
-											ViewListener.OnClick
-									})
+	                listeners = {
+		                ViewListener.OnLongClick,
+		                ViewListener.OnClick
+	                })
 	TextView helloWorldTextView;
 
-	public MyFirstController() {
+	public Controller_HelloWorld() {
 		super(R.layout.controller__hello_world);
+	}
+
+	@Override
+	protected void onCreate() {
+
+		helloWorldTextView.setText("Hello World " + index++);
+		super.onCreate();
 	}
 
 	@Override
