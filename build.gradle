@@ -6,7 +6,7 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.0'
+        classpath 'com.android.tools.build:gradle:3.1.2'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -24,11 +24,13 @@ task wrapper(type: Wrapper) {
     gradleVersion = '4.4'
 }
 
-apply from: './dev-tools/gradle/version-bump-tasks.gradle'
+def path = rootProject.projectDir.getAbsolutePath() + "/dev-tools/gradle"
+apply from: path + '/version-bump-tasks.gradle'
 
 subprojects {
-    apply from: '../dev-tools/gradle/version-bump.gradle'
-    apply from: '../dev-tools/gradle/utils.gradle'
+    apply from: path + '/common-cyborg.gradle'
+    apply from: path + '/version-bump.gradle'
+    apply from: path + '/utils.gradle'
 }
 
 task clean(type: Delete) {

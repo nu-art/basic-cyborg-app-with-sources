@@ -1,21 +1,4 @@
-apply plugin: 'com.android.application'
-
-android {
-    def abiFilter
-    if (getGradleVersion() >= 4.1f)
-        abiFilter = com.android.build.VariantOutput.ABI
-    else
-        abiFilter = com.android.build.OutputFile.FilterType.ABI
-
-    apply from: '../dev-tools/gradle/common-cyborg-app.gradle'
-
-    defineDefaultVariantsAPK(abiFilter, "basic-cyborg-app")
-
-    defaultConfig {
-        multiDexEnabled true
-        applicationId "com.your.app"
-    }
-}
+applyAndroidApplication("com.your.app", "basic-cyborg-app")
 
 dependencies {
     compile "com.nu-art-software.cyborg:cyborg-core:${NU_ART_VERSION}"
