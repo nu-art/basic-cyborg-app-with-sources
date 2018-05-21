@@ -1,1 +1,2 @@
+include ':cyborg-core'
 include ':app'
