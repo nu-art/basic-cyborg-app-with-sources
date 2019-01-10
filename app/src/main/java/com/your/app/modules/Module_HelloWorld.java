@@ -8,7 +8,7 @@
  * Email: Adam.Zehavi@Nu-Art-Software.com
  */
 
-package com.your.app;
+package com.your.app.modules;
 
 import com.nu.art.cyborg.core.CyborgModule;
 

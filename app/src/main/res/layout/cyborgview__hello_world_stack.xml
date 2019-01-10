@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    cyborg:controller="com.your.app.Controller_HelloWorldStack"
+    cyborg:controller="com.your.app.ui.Controller_HelloWorldStack"
     cyborg:tag="mytag"
     />
 

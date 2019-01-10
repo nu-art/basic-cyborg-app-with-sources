@@ -1,4 +1,4 @@
-package com.your.app;
+package com.your.app.ui;
 
 import android.view.View;
 
@@ -10,6 +10,7 @@ import com.nu.art.cyborg.core.CyborgStackController;
 import com.nu.art.cyborg.core.animations.PredefinedStackTransitionAnimator;
 import com.nu.art.cyborg.core.animations.PredefinedTransitions;
 import com.nu.art.cyborg.core.animations.transitions.BaseTransition;
+import com.your.app.R;
 
 /**
  * Created by TacB0sS on 06-Jul 2017.

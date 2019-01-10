@@ -1,9 +1,10 @@
-package com.your.app;
+package com.your.app.core;
 
 import android.app.Application;
 
 import com.nu.art.cyborg.core.CyborgBuilder;
 import com.nu.art.cyborg.core.CyborgBuilder.CyborgConfiguration;
+import com.your.app.R;
 
 public class MyApplication
 	extends Application {

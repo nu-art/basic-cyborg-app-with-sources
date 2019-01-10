@@ -8,9 +8,10 @@
  * Email: Adam.Zehavi@Nu-Art-Software.com
  */
 
-package com.your.app;
+package com.your.app.core;
 
 import com.nu.art.modular.core.ModulesPack;
+import com.your.app.modules.Module_HelloWorld;
 
 @SuppressWarnings("unchecked")
 public class ModulePack_HelloWorld

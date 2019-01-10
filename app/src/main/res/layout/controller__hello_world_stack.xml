@@ -18,7 +18,7 @@
 
         cyborg:controller="com.nu.art.cyborg.core.CyborgStackController"
 
-        cyborg:rootController="com.your.app.Controller_HelloWorld"
+        cyborg:rootController="com.your.app.ui.Controller_HelloWorld"
         cyborg:rootTag="HelloWorld"
 
         cyborg:transition="Fade"
