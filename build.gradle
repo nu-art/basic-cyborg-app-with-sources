@@ -6,7 +6,7 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:3.5.0-alpha01'
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -20,8 +20,8 @@ allprojects {
     }
 }
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '4.6'
+task wrapper1(type: Wrapper) {
+    gradleVersion = '5.1'
 }
 
 def path = rootProject.projectDir.getAbsolutePath() + "/dev-tools/gradle"

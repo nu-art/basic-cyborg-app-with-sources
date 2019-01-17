@@ -1,6 +1,5 @@
 package com.your.app.ui;
 
-import android.graphics.Color;
 import android.view.View;
 import android.widget.TextView;
 
@@ -13,13 +12,10 @@ import com.your.app.R;
  * Created by TacB0sS on 12-May 2017.
  */
 
-public class Controller_HelloWorld
+public class Controller_HelloWorld2
 	extends CyborgController {
 
 	private static int index;
-	private static Integer[] colors = new Integer[]{
-			Color.RED,Color.BLUE,Color.GREEN
-	};
 
 	// Inject view and set an OnLongClickListener and an OnClickListener.
 	@ViewIdentifier(viewId = R.id.HelloWorld,
@@ -29,16 +25,14 @@ public class Controller_HelloWorld
 	                })
 	TextView helloWorldTextView;
 
-	public Controller_HelloWorld() {
-		super(R.layout.controller__hello_world);
+	public Controller_HelloWorld2() {
+		super(R.layout.controller__hello_world2);
 	}
 
 	@Override
 	protected void onCreate() {
 
-
 		helloWorldTextView.setText("Hello World " + index++);
-		getRootView().setBackgroundColor(colors[UtilsRandom.nextInt(colors.length)]);
 		super.onCreate();
 	}
 
