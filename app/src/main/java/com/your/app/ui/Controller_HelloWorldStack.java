@@ -46,7 +46,7 @@ public class Controller_HelloWorldStack
 		stackController.createLayerBuilder()
 		               .setControllerType(Controller_HelloWorld.class)
 		               .setDuration(2000)
-		               .setStackTransitionAnimators(createLayerTransition(PredefinedTransitions.Cube))
+		               .setStackTransitionAnimators(createLayerTransition(PredefinedTransitions.Fade))
 		               .build();
 		return true;
 	}
@@ -54,13 +54,16 @@ public class Controller_HelloWorldStack
 	@Override
 	public void onClick(View v) {
 		PredefinedStackTransitionAnimator animation;
+		Class<? extends CyborgController> controllerType;
 		switch (v.getId()) {
 			case R.id.TV_AddSecondLayer1:
-				animation = new PredefinedStackTransitionAnimator(getActivity(), PredefinedTransitions.Slide, BaseTransition.ORIENTATION_HORIZONTAL);
+				animation = new PredefinedStackTransitionAnimator(getActivity(), PredefinedTransitions.Cube, BaseTransition.ORIENTATION_HORIZONTAL);
+				 controllerType = Controller_HelloWorld.class;
 				break;
 
 			case R.id.TV_AddSecondLayer2:
 				animation = new PredefinedStackTransitionAnimator(getActivity(), PredefinedTransitions.Slide, BaseTransition.ORIENTATION_VERTICAL);
+				controllerType=Controller_HelloWorld2.class;
 				break;
 
 			default:
@@ -68,6 +71,6 @@ public class Controller_HelloWorldStack
 		}
 
 		CyborgStackController stackController = getControllerById(R.id.Tag_RootStack);
-		stackController.createLayerBuilder().setControllerType(Controller_HelloWorld.class).setStackTransitionAnimators(animation).setDuration(600).build();
+		stackController.createLayerBuilder().setControllerType(controllerType).setStackTransitionAnimators(animation).setDuration(600).build();
 	}
 }
