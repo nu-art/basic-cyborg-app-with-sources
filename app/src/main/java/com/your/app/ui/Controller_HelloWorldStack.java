@@ -7,9 +7,8 @@ import com.nu.art.cyborg.annotations.ViewIdentifier;
 import com.nu.art.cyborg.common.consts.ViewListener;
 import com.nu.art.cyborg.core.CyborgController;
 import com.nu.art.cyborg.core.CyborgStackController;
-import com.nu.art.cyborg.core.animations.PredefinedStackTransitionAnimator;
-import com.nu.art.cyborg.core.animations.PredefinedTransitions;
-import com.nu.art.cyborg.core.animations.transitions.BaseTransition;
+import com.nu.art.cyborg.core.stackTransitions.StackTransitions;
+import com.nu.art.cyborg.core.stackTransitions.Transition;
 import com.your.app.R;
 
 /**
@@ -26,7 +25,7 @@ public class Controller_HelloWorldStack
 	//									})
 	//	TextView helloWorldTextView;
 
-	@ViewIdentifier(viewIds = {
+	@ViewIdentifier(viewId = {
 		R.id.TV_AddSecondLayer1,
 		R.id.TV_AddSecondLayer2
 	},
@@ -45,22 +44,22 @@ public class Controller_HelloWorldStack
 		CyborgStackController stackController = getControllerById(R.id.Tag_RootStack);
 		stackController.createLayerBuilder()
 		               .setControllerType(Controller_HelloWorld.class)
-		               .setDuration(2000)
-		               .setStackTransitionAnimators(createLayerTransition(PredefinedTransitions.Cube))
+		               .setTransitionDuration(2000)
+		               .setTransitions(StackTransitions.SlideL2R)
 		               .build();
 		return true;
 	}
 
 	@Override
 	public void onClick(View v) {
-		PredefinedStackTransitionAnimator animation;
+		Transition animation;
 		switch (v.getId()) {
 			case R.id.TV_AddSecondLayer1:
-				animation = new PredefinedStackTransitionAnimator(getActivity(), PredefinedTransitions.Slide, BaseTransition.ORIENTATION_HORIZONTAL);
+				animation = StackTransitions.SlideL2R;
 				break;
 
 			case R.id.TV_AddSecondLayer2:
-				animation = new PredefinedStackTransitionAnimator(getActivity(), PredefinedTransitions.Slide, BaseTransition.ORIENTATION_VERTICAL);
+				animation = StackTransitions.SlideT2B;
 				break;
 
 			default:
@@ -68,6 +67,6 @@ public class Controller_HelloWorldStack
 		}
 
 		CyborgStackController stackController = getControllerById(R.id.Tag_RootStack);
-		stackController.createLayerBuilder().setControllerType(Controller_HelloWorld.class).setStackTransitionAnimators(animation).setDuration(600).build();
+		stackController.createLayerBuilder().setControllerType(Controller_HelloWorld.class).setTransitions(animation).setTransitionDuration(600).build();
 	}
 }
